@@ -673,31 +673,6 @@ pre tt:after {
   content: "";
 }
 
-h1 {
-  font-family: Pacifico, Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 2.5rem;
-}
-
-.heading {
-  margin-top: 13rem;
-  margin-bottom: 3rem;
-  text-transform: lowercase;
-  color: #e63946;
-}
-
-p {
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  font-size: 1.1rem;
-}
-
-footer p {
-  font-size: inherit;
-}
-
 a {
   font-family: "Source Code Pro", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
   text-decoration: none;
@@ -713,32 +688,8 @@ a:focus {
   color: white;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 2;
-}
-
-.social-links {
-  margin-left: 0;
-}
-
-.social-links li {
-  display: inline-block;
-  margin-right: 2.5rem;
-}
-
-.social-links li a {
-  font-size: 1.2rem;
-}
-
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .heading {
-    margin-top: 5rem;
   }
 }

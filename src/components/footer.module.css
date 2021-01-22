@@ -1,0 +1,9 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  font-size: 1.1rem;
+}
+
+.container p {
+  font-size: inherit;
+}

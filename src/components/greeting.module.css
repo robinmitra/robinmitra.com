@@ -1,0 +1,14 @@
+.heading {
+  font-family: Pacifico, Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 2.5rem;
+  margin-top: 13rem;
+  margin-bottom: 3rem;
+  text-transform: lowercase;
+  color: #e63946;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    margin-top: 5rem;
+  }
+}
