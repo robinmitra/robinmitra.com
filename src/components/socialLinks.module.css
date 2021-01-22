@@ -10,3 +10,9 @@
 .container li a {
   font-size: 1.2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .container li {
+    display: block;
+  }
+}
