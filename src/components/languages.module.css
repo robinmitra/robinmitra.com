@@ -1,0 +1,17 @@
+.container {
+  margin: 0;
+}
+
+.language {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0 0.75rem 0 0;
+}
+
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e63946;
+}

@@ -1,0 +1,26 @@
+.container {
+  display: block;
+  border: none;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  padding: 1rem;
+  font-weight: normal;
+}
+
+article {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+}
+
+.project {
+  /*background: aquamarine;*/
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.languages {
+  /*background: bisque;*/
+}
