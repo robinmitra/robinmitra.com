@@ -11,3 +11,18 @@
   font-size: 1.2rem;
   border: none;
 }
+
+.container .link-text {
+  display: inline-block;
+  margin-left: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container li a {
+    font-size: 1.75rem;
+  }
+
+  .container .link-text {
+    display: none;
+  }
+}
