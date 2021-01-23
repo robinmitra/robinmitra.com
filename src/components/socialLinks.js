@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faTwitter, faLinkedin, faSteam } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./socialLinks.module.css";
 
@@ -15,6 +15,11 @@ const SocialLinks = () => {
       <li>
         <a href="https://twitter.com/robinmitra/">
           <FontAwesomeIcon icon={faTwitter} /> Twitter
+        </a>
+      </li>
+      <li>
+        <a href="https://steamcommunity.com/id/robinmitra/">
+          <FontAwesomeIcon icon={faSteam} /> Steam
         </a>
       </li>
       <li>
