@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import styles from './socialLinks.module.css'
+import styles from "./socialLinks.module.css";
 
 const SocialLinks = () => {
   return (
@@ -9,7 +9,7 @@ const SocialLinks = () => {
       <li><a href="https://twitter.com/robinmitra/">Twitter</a></li>
       <li><a href="https://www.linkedin.com/in/robinmitra/">LinkedIn</a></li>
     </ul>
-  )
-}
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;

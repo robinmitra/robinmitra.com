@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import styles from "./projects.module.css"
-import Project from "./project"
+import styles from "./projects.module.css";
+import Project from "./project";
 
 const getFilteredNodes = nodes => nodes.filter(repo => (
   !repo.isArchived && repo.owner.login === "robinmitra"
-)).slice(0, 6)
+)).slice(0, 6);
 
 const Projects = () => {
   const { github: { viewer: { repositories: { nodes } } } } = useStaticQuery(
@@ -32,8 +32,8 @@ const Projects = () => {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
   return (
     <section className={styles.container}>
@@ -50,7 +50,7 @@ const Projects = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

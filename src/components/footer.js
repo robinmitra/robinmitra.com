@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import styles from './footer.module.css'
+import styles from "./footer.module.css";
 
 const Footer = () => (
   <footer className={styles.container}>
@@ -8,6 +8,6 @@ const Footer = () => (
       Made by Robin using <a href="https://www.gatsbyjs.com">Gatsby</a>
     </p>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

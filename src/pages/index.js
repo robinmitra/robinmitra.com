@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Body from "../components/body"
-import SocialLinks from "../components/socialLinks"
-import Projects from "../components/projects"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Body from "../components/body";
+import SocialLinks from "../components/socialLinks";
+import Projects from "../components/projects";
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +15,6 @@ const IndexPage = () => (
     </Body>
     <Projects />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

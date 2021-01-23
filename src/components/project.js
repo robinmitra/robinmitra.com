@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import styles from "./project.module.css"
-import Languages from "./languages"
+import styles from "./project.module.css";
+import Languages from "./languages";
 
 const Project = ({ title, url, description, languages }) => (
   <a className={styles.container} href={url}>
@@ -15,6 +15,6 @@ const Project = ({ title, url, description, languages }) => (
       </div>
     </article>
   </a>
-)
+);
 
-export default Project
+export default Project;

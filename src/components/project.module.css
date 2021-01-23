@@ -1,7 +1,7 @@
 .container {
   display: block;
   border: none;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   padding: 1rem;
   font-weight: normal;
@@ -14,7 +14,6 @@ article {
 }
 
 .project {
-  /*background: aquamarine;*/
 }
 
 .title {
@@ -22,5 +21,4 @@ article {
 }
 
 .languages {
-  /*background: bisque;*/
 }

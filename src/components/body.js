@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
-import styles from "./body.module.css"
+import styles from "./body.module.css";
 
 const Body = ({ children }) => (
   <section className={styles.container}>
     {children}
   </section>
-)
+);
 
-export default Body
+export default Body;
