@@ -3,3 +3,21 @@
   max-width: 960px;
   padding: 1.45rem 1.0875rem 1.45rem;
 }
+
+section {
+  margin: 3rem 0;
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    margin: 2rem 0;
+  }
+}

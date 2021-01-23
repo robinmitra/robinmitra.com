@@ -7,6 +7,9 @@
   "dependencies": {
     "@fontsource/pacifico": "^4.1.0",
     "@fontsource/source-code-pro": "^4.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-google-gtag": "^2.7.0",

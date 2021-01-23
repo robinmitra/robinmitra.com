@@ -665,13 +665,14 @@ a {
   color: inherit;
   font-weight: bold;
   border-bottom: 3px dashed #e63946;
-  padding: 0.1rem 0.3rem;
+  padding: 0.15rem 0.3rem;
 }
 
 a:focus, a:hover {
   outline: none;
   background: #e63946;
   color: white;
+  border-radius: 3px;
 }
 
 @media only screen and (max-width: 480px) {
