@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "@fontsource/pacifico";
+import "@fontsource/source-code-pro";
 
 import styles from "./layout.module.css";
 import Footer from "./footer";
