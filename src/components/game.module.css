@@ -20,3 +20,19 @@
   font-size: 1.2rem;
   font-weight: normal;
 }
+
+@media only screen and (max-width: 600px) {
+  .container article {
+    grid-template-columns: auto 1fr;
+    row-gap: 0.1rem;
+  }
+
+  .image {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+  }
+}

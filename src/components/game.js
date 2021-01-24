@@ -17,9 +17,9 @@ const getDuration = minutes => {
 const Game = ({ id, title, imageHash, totalPlaytime, recentPlaytime }) => (
   <a className={styles.container} href={getGameUrl(id)}>
     <article>
-      <img src={getGameImageUrl({ id, imageHash })} alt="" />
+      <img className={styles.image} src={getGameImageUrl({ id, imageHash })} alt="" />
       <h2 className={styles.title}>{title}</h2>
-      <p>{getDuration(totalPlaytime)} played on Steam</p>
+      <p className={styles.duration}>Played {getDuration(totalPlaytime)} on Steam</p>
     </article>
   </a>
 );
