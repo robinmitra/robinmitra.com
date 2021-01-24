@@ -55,6 +55,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-source-steam",
+      options: {
+        api_key: process.env.STEAM_KEY,
+        user_id: process.env.STEAM_USER_ID,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
