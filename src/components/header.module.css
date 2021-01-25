@@ -1,6 +1,8 @@
 .container {
   font-family: Pacifico, Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
   margin: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .heading {

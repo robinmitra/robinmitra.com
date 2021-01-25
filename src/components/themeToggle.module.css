@@ -1,0 +1,52 @@
+.check-box {
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sun {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: black;
+  position: relative;
+  transform: scale(0.55);
+  top: 14px;
+  cursor: pointer;
+}
+
+.sun::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 -23px 0 black, 0 23px 0 black, 23px 0 0 black, -23px 0 0 black, 16px 16px 0 black, -16px 16px 0 black, 16px -16px 0 black, -16px -16px 0 black;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.moon {
+  width: 24px;
+  height: 24px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  top: 14px;
+  cursor: pointer;
+}
+
+.moon::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  left: 9px;
+}
