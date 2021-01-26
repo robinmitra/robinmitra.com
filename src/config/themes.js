@@ -1,15 +1,15 @@
 export const light = {
-  body: "#fff",
   text: "#363537",
-  toggleBorder: "#fff",
-  background: "#363537",
+  background: "#f1faee",
+  card: "#fafafa",
+  separator: "rgba(0, 0, 0, 0.1)",
 };
 
 export const dark = {
-  body: "#363537",
   text: "#fafafa",
-  toggleBorder: "#6b8096",
-  background: "#999",
+  background: "#264673",
+  card: "#1d3557",
+  separator: "#264673",
 };
 
 export default { light, dark };

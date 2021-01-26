@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import styles from "./projects.module.css";
 import Project from "./project";
+import { ThemeContext } from "../providers/theme";
 
 const getFilteredNodes = nodes => nodes.filter(repo => (
   !repo.isArchived && repo.owner.login === "robinmitra"
 )).slice(0, 6);
 
 const Projects = () => {
+  const { theme } = useContext(ThemeContext);
+
   const { github: { viewer: { repositories: { nodes } } } } = useStaticQuery(
     graphql`
       {
@@ -36,7 +39,7 @@ const Projects = () => {
   );
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} style={{ color: theme.text }}>
       <h2>Recent projects</h2>
       <div className={styles.projectsContainer}>
         {getFilteredNodes(nodes).map(node => (

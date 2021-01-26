@@ -670,7 +670,7 @@ a {
 
 a:focus, a:hover {
   outline: none;
-  background: #e63946;
+  background: #e63946 !important; /* override theme background upon hover */
   color: white;
   border-radius: 3px;
 }

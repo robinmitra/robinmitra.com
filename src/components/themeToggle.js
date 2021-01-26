@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { ThemeContext } from "../providers/theme";
-import { light } from "../config/themes";
+import { light, dark } from "../config/themes";
 import styles from "./themeToggle.module.css";
 
 const ThemeToggle = () => {
@@ -10,7 +10,11 @@ const ThemeToggle = () => {
   return (
     <div>
       <input className={styles.checkBox} type="checkbox" />
-      <div className={theme === light ? styles.sun : styles.moon} onClick={toggleTheme} />
+      <div
+        className={theme === light ? styles.moon : styles.sun}
+        style={{ backgroundColor: theme === light ? dark.background : light.background }}
+        onClick={toggleTheme}
+      />
     </div>
   );
 };

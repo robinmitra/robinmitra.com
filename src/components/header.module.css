@@ -1,6 +1,7 @@
 .container {
+  max-width: 960px;
   font-family: Pacifico, Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
-  margin: 3rem 0;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr auto;
 }
