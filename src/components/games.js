@@ -28,7 +28,7 @@ const Games = () => {
 
   return (
     <section className={styles.container} style={{ color: theme.text }}>
-      <h2>Currently playing</h2>
+      <h2>Recent games</h2>
       <div className={styles.gamesContainer}>
         {nodes.map(node => (
           <Game
