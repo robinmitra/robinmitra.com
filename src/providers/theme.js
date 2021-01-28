@@ -15,7 +15,7 @@ export const ThemeContext = React.createContext(defaultValue);
 
 ThemeContext.displayName = "Theme";
 
-export default ({ children }) => {
+const Provider = ({ children }) => {
   const [theme, toggleTheme] = useTheme();
 
   return (
@@ -24,3 +24,5 @@ export default ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export default Provider;
