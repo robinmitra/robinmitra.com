@@ -1,4 +1,5 @@
 export const light = {
+  label: "light",
   text: "#363537",
   background: "#f1faee",
   card: "#fafafa",
@@ -6,6 +7,7 @@ export const light = {
 };
 
 export const dark = {
+  label: "dark",
   text: "#fafafa",
   background: "#264673",
   card: "#1d3557",
