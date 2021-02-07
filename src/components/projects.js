@@ -10,8 +10,6 @@ const getFilteredNodes = nodes => nodes.filter(repo => (
 )).slice(0, 6);
 
 const Projects = () => {
-  const { theme } = useContext(ThemeContext);
-
   const { github: { viewer: { repositories: { nodes } } } } = useStaticQuery(
     graphql`
       {
@@ -39,7 +37,7 @@ const Projects = () => {
   );
 
   return (
-    <section className={styles.container} style={{ color: theme.text }}>
+    <section className={styles.container}>
       <h2>Recent projects</h2>
       <div className={styles.projectsContainer}>
         {getFilteredNodes(nodes).map(node => (

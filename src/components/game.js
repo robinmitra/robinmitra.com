@@ -16,14 +16,8 @@ const getDuration = minutes => {
 };
 
 const Game = ({ id, title, imageHash, totalPlaytime, recentPlaytime }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <a
-      className={styles.container}
-      href={getGameUrl(id)}
-      style={{ backgroundColor: theme.card, color: theme.text, borderBottomColor: theme.separator }}
-    >
+    <a className={styles.container} href={getGameUrl(id)}>
       <article>
         <img className={styles.image} src={getGameImageUrl({ id, imageHash })} alt="" />
         <h2 className={styles.title}>{title}</h2>

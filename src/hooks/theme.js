@@ -1,25 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { light, dark } from "../config/themes";
 
-export const useTheme = () => {
-  let defaultTheme = light;
-
-  // Not using `useEffect` for retrieving this in order to avoid a flash of default theme.
+const getPreferredTheme = () => {
   const preferredTheme = window.localStorage.getItem("theme");
-  if (preferredTheme) defaultTheme = preferredTheme === "light" ? light : dark;
+  if (preferredTheme) return preferredTheme === "light" ? light : dark;
+  return light;
+};
 
-  const [theme, setTheme] = useState(defaultTheme);
+export const useTheme = () => {
+  const [theme, setTheme] = useState(light);
 
   const toggleTheme = () => {
-    if (theme === light) {
-      window.localStorage.setItem("theme", "dark");
-      setTheme(dark);
-    } else {
-      window.localStorage.setItem("theme", "light");
-      setTheme(light);
-    }
+    const root = window.document.documentElement;
+
+    const newTheme = theme === light ? dark : light;
+
+    window.localStorage.setItem("theme", newTheme.label);
+    setTheme(newTheme);
+    Object.entries(newTheme).forEach(([name, value]) => {
+      const cssVarName = `--${name}`;
+      root.style.setProperty(cssVarName, `${value}`);
+    });
   };
+
+  useEffect(() => {
+    setTheme(getPreferredTheme());
+  }, []);
 
   return [theme, toggleTheme];
 };

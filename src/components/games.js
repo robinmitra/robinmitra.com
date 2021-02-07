@@ -6,8 +6,6 @@ import Game from "./game";
 import { ThemeContext } from "../providers/theme";
 
 const Games = () => {
-  const { theme } = useContext(ThemeContext);
-
   const { allSteamGame: { nodes } } = useStaticQuery(
     graphql`
       {
@@ -27,7 +25,7 @@ const Games = () => {
   );
 
   return (
-    <section className={styles.container} style={{ color: theme.text }}>
+    <section className={styles.container}>
       <h2>Recent games</h2>
       <div className={styles.gamesContainer}>
         {nodes.map(node => (
