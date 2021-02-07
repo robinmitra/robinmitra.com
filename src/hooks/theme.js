@@ -2,12 +2,6 @@ import { useEffect, useState } from "react";
 
 import { light, dark } from "../config/themes";
 
-const getPreferredTheme = () => {
-  const preferredTheme = window.localStorage.getItem("theme");
-  if (preferredTheme) return preferredTheme === "light" ? light : dark;
-  return light;
-};
-
 export const useTheme = () => {
   const [theme, setTheme] = useState(light);
 
@@ -25,7 +19,9 @@ export const useTheme = () => {
   };
 
   useEffect(() => {
-    setTheme(getPreferredTheme());
+    const root = window.document.documentElement;
+    const initialTheme = root.style.getPropertyValue("--initial-theme");
+    setTheme(initialTheme === "light" ? light : dark);
   }, []);
 
   return [theme, toggleTheme];

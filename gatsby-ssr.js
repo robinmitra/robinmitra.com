@@ -30,6 +30,8 @@ const script = (t) => {
     const cssVarName = `--${name}`;
     root.style.setProperty(cssVarName, `${value}`);
   });
+
+  root.style.setProperty("--initial-theme", theme.label);
 };
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
