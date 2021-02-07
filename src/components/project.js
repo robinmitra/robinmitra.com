@@ -5,10 +5,8 @@ import Languages from "./languages";
 import { ThemeContext } from "../providers/theme";
 
 const Project = ({ title, url, description, languages }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <a className={styles.container} href={url} style={{ backgroundColor: theme.card }}>
+    <a className={styles.container} href={url}>
       <article>
         <div className={styles.project}>
           <h2 className={styles.title}>{title}</h2>

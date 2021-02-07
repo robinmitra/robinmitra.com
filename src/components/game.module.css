@@ -4,6 +4,9 @@
   border-radius: 3px;
   padding: 1rem;
   font-weight: normal;
+  background-color: var(--card);
+  color: var(--text);
+  border-bottom-color: var(--separator);
 }
 
 .container article > * {

@@ -4,6 +4,12 @@
 
 ### Start developing
 
+Set up the following environment variables in a file named `.env.development`:
+
+* `GITHUB_TOKEN`
+* `STEAM_KEY`
+* `STEAM_USER_ID`
+
 Start the development server:
 
 ```shell

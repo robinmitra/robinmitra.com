@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import "@fontsource/pacifico";
 import "@fontsource/source-code-pro";
 
-import { ThemeContext } from "../providers/theme";
 import styles from "./layout.module.css";
 import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ children }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div className={styles.container} style={{ backgroundColor: theme.background }}>
+    <div className={styles.container}>
       <Header />
       <main className={styles.mainContainer}>{children}</main>
       <Footer />
