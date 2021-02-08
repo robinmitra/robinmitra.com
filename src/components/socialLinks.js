@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter, faLinkedin, faSteam } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+  faSteam,
+} from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./socialLinks.module.css";
 
@@ -9,25 +14,25 @@ const SocialLinks = () => {
     <ul className={styles.container}>
       <li>
         <a href="https://github.com/robinmitra/">
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} fixedWidth />
           <span className={styles.linkText}>GitHub</span>
         </a>
       </li>
       <li>
         <a href="https://twitter.com/robinmitra/">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faTwitter} fixedWidth />
           <span className={styles.linkText}>Twitter</span>
         </a>
       </li>
       <li>
         <a href="https://steamcommunity.com/id/robinmitra/">
-          <FontAwesomeIcon icon={faSteam} />
+          <FontAwesomeIcon icon={faSteam} fixedWidth />
           <span className={styles.linkText}>Steam</span>
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/robinmitra/">
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} fixedWidth />
           <span className={styles.linkText}>LinkedIn</span>
         </a>
       </li>

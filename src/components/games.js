@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import styles from "./games.module.css";
 import Game from "./game";
-import { ThemeContext } from "../providers/theme";
 
 const Games = () => {
   const { allSteamGame: { nodes } } = useStaticQuery(
