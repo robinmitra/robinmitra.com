@@ -13,25 +13,31 @@ const Script = ({ children }) => {
   return <script dangerouslySetInnerHTML={{ __html: `(${children.toString()})(${JSON.stringify(themes)});` }} />;
 };
 
-const script = (t) => {
-  const getInitialTheme = () => {
-    const { light, dark } = t;
-    let theme = light;
-    const preferredTheme = window.localStorage.getItem("theme");
-    if (preferredTheme) theme = preferredTheme === "light" ? light : dark;
-    return theme;
+const script = allThemes => {
+  const { light, dark } = allThemes;
+
+  const initThemeVars = chosenTheme => {
+    const root = document.documentElement;
+
+    root.style.setProperty("--initial-theme", chosenTheme.label);
+    Object.entries(chosenTheme).forEach(([name, value]) => {
+      const cssVarName = `--${name}`;
+      root.style.setProperty(cssVarName, `${value}`);
+    });
   };
 
-  const theme = getInitialTheme();
+  // Local-level theme preference.
+  const preferredThemeLabel = window.localStorage.getItem("theme");
 
-  const root = document.documentElement;
+  // OS-level theme preference.
+  const darkOSThemeMQList = window.matchMedia("(prefers-color-scheme: dark)");
+  const darkOSThemeEnabled = darkOSThemeMQList.matches === true;
 
-  Object.entries(theme).forEach(([name, value]) => {
-    const cssVarName = `--${name}`;
-    root.style.setProperty(cssVarName, `${value}`);
-  });
+  if (preferredThemeLabel) {
+    return void initThemeVars(preferredThemeLabel === "light" ? light : dark);
+  }
 
-  root.style.setProperty("--initial-theme", theme.label);
+  initThemeVars(darkOSThemeEnabled ? dark : light);
 };
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
