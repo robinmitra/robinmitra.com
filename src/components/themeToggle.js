@@ -13,7 +13,10 @@ const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ opacity: theme !== undefined ? 1 : 0 }}
+    >
       <input
         className={styles.checkBox}
         type="checkbox"

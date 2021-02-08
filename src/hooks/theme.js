@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { light, dark } from "../config/themes";
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = useState(undefined);
 
   const toggleTheme = () => {
     const root = window.document.documentElement;
@@ -20,8 +20,9 @@ export const useTheme = () => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    const initialTheme = root.style.getPropertyValue("--initial-theme");
-    setTheme(initialTheme === "light" ? light : dark);
+    const initialThemeName = root.style.getPropertyValue("--initial-theme");
+    const initialTheme = initialThemeName === "light" ? light : dark;
+    setTheme(initialTheme);
   }, []);
 
   return [theme, toggleTheme];
