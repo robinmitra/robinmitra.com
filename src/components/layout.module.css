@@ -1,9 +1,11 @@
 .container {
   padding: 1.45rem 1.0875rem 1.45rem;
+  position: relative;
+  min-height: 100vh;
 }
 
 .main-container {
-  margin: 0 auto;
+  margin: 0 auto 8rem;
   max-width: 960px;
 }
 
@@ -20,6 +22,10 @@ section:last-of-type {
 }
 
 @media only screen and (max-width: 600px) {
+  .main-container {
+    margin-bottom: 9rem;
+  }
+
   section {
     margin: 2rem 0;
   }
