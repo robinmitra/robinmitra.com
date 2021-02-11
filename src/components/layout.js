@@ -7,12 +7,12 @@ import styles from "./layout.module.css";
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showHeader = true, showFooter = true }) => {
   return (
     <div className={styles.container}>
-      <Header />
+      {showHeader && <Header />}
       <main className={styles.mainContainer}>{children}</main>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 };

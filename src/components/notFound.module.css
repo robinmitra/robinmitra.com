@@ -1,0 +1,18 @@
+.container {
+    color: var(--text);
+}
+
+.container h1 {
+    margin-top: 3rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .container h1 {
+        margin-top: 3.5rem;
+    }
+}
