@@ -1,13 +1,19 @@
-const params = new URLSearchParams(window.location.search);
-
-const logLevel = +params.get("log_level");
-
 const LOG_LEVEL_ERROR = 1; // 0001
 const LOG_LEVEL_WARNING = 2; // 0010
 const LOG_LEVEL_INFO = 4; // 0100
 const LOG_LEVEL_DEBUG = 8; // 1000
 
-const isLevelAllowed = level => logLevel & level;
+let logLevel;
+
+const getLogLevel = () => {
+  if (logLevel) return logLevel;
+  const params = new URLSearchParams(window.location.search);
+  const level = +params.get("log_level");
+  logLevel = level in [1, 2, 4, 8] ? level : 15; // allo everything by default.
+  return logLevel;
+};
+
+const isLevelAllowed = level => getLogLevel() & level;
 
 const createLog = ({ data, level }) => {
   if (!isLevelAllowed(level)) return;
