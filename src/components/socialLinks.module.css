@@ -27,6 +27,11 @@
     font-size: 1.75rem;
   }
 
+  .container li a svg {
+    width: auto;
+    height: auto;
+  }
+
   .container .link-text {
     display: none;
   }
